@@ -84,7 +84,7 @@ const createProduct = async (req, res) => {
         .send({ status: false, message: "Price is required" });
     }
 
-    if (!!isNaN(Number(price))) {
+    if (!isNaN(Number(price))) {
       return res
         .status(400)
         .send({ status: false, message: `Price should be a valid number` });

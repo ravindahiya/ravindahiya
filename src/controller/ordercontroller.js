@@ -31,9 +31,9 @@ const createOrder = async function (req, res) {
             return res.status(400).send({ status: false, message: "NO cart exist for this user" })
         }
         // console.log(cartData.items.length)
-        if (cartData.items.length === 0) {
-            return res.status(400).send({ status: false, message: "Your cart is empty" })
-        }
+        // if (cartData.items.length === 0) {
+        //     return res.status(400).send({ status: false, message: "Your cart is empty" })
+        // }
 
         let cartDetails = JSON.parse(JSON.stringify(cartData))
         //console.log(cartData)
